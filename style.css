@@ -1,0 +1,240 @@
+
+/*RESET*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Shantell Sans', cursive;
+}
+
+/*Arriba del Header*/
+#arribadelheader {
+    width: 100%;
+    height: 5%;
+    background: rgb(59, 54, 54);
+}
+
+.redes {
+    padding: 0 10px;
+}
+
+.redes li{
+    display: inline-block;
+    margin: 5px 15px;
+}
+
+.redes .fb {
+    color: #3b5998;
+}
+
+.redes .ig {
+    color: #E1306C;
+}
+
+.redes .tw {
+    color: #00acee;
+}
+
+
+
+
+/*HEADER*/
+header {
+    top: 5%; /*para que no tape la caja de arriba*/
+    height: 50px; /*alto*/
+    padding: 0 25px; /*padding en el eje Y y eje X*/
+    background: rgb(148, 190, 31); /*color de fondo*/
+    display: flex; /*para que sus elementos se pongan uno al lado de otro*/
+    justify-content: space-between; /*para que haya un espacio entre sus elementos*/
+    align-items: center; /*para que sus elementos se centren verticalmente*/
+}
+
+/*Logo*/
+.logo {
+    text-transform: uppercase; /*texto en mayúscula*/
+    color: rgb(255, 255, 255); /*color del texto*/
+    font-weight: 900; /*grosor del texto*/
+}
+
+
+
+
+
+/*Barra de navegación*/
+.menu a {
+    color: aliceblue; /*color texto*/
+    text-transform: uppercase; /*texto en mayúscula*/
+    text-decoration: none; /*quitarle el subrayado a los links*/
+    transition: .4s; /*para que cuando se haga el hover sea suave y no tan brusco*/
+}
+
+.menu a:nth-of-type(2) {
+    padding: 0 30px; /*padding en el eje Y y eje X del elemento a en segunda posición*/
+}
+
+
+.mostrar-menu, .esconder-menu {
+    font-size: 30px; /*tamaño botones*/
+    cursor: pointer; /*para que el cursor se trasforme en manito cuando pase por encima de los botones mostrar y esconder*/
+    display: none; /*para que los botones no se vea en pantallas medianas y grandes*/
+    transition: .4s; /*para que cuando se muestre y cierre la barra del menú sea suave y no tan brusco*/
+}
+
+.menu a:hover, .mostrar-menu a:hover, .esconder-menu a:hover {
+    color: rgb(62, 86, 92); /*para que los links cambien de color cuando el mouse pase por arriba*/
+}
+
+#check {
+    display: none; /*para que no se vea la tilde del check en pantallas medianas y grandes*/
+}
+
+
+#banner {
+    padding: 0 50px; /*relleno en el eje Y y eje X*/
+    background-image: url(imagenes/futbol.jpg); /*una imagen de fondo a la caja del banner*/
+    height: 45vh; /*para que la caja del banner ocupe 45 de la vista a lo largo*/
+    background-size: cover; /*para que la caja del banner tome toda la imágen*/
+    background-position: center; /*para centrar la imágen de fondo en la caja del banner*/
+}
+
+/*capa trasparente delante de la imágen del banner*/
+#banner::before {
+    content: "";
+    background: rgba(77, 77, 92, 0.6);
+    position: absolute; 
+    width: 100%; /*para que ocupe el 100% de ancho de su contenedor*/
+    left: 0; /*para que ocupe el 100% de ancho de su contenedor*/
+    height: 45vh; /*para que ocupe el 45 de la vista a lo largo*/
+}
+
+#banner h3 {
+    font-size: 30px; /*tamaño del texto*/
+    font-weight: 400; /*grosor del texto*/
+    padding: 10px 0; /*relleno en el eje Y y eje X*/
+}
+
+#banner span {
+    font-weight: 600;
+}
+
+.contenido-banner {
+    position: relative; /*para que el texto aparezca por encima de la capa trasparente y no detrás*/
+    color: aliceblue; /*color del texto*/
+    display: flex; /*para que el contenido se ponga uno al lado del otro y lo podamos acomodar*/
+    flex-direction: column; /*para que el contenido se ponga uno debajo del otro*/
+    height: 100%; /*para que el contenido ocupe el 100% de altura*/
+    justify-content: center; /*para que el contenido se centre de forma vertical dentro de la caja del banner*/
+}
+
+
+.boton-empezar {
+    color: white;
+    text-decoration: none;
+    border: 2px solid rgb(105, 105, 112);
+    padding: 5px 10px; 
+    align-self: baseline; /*propiedad de flex box para pasar un elemento en bloque a elemento en línea*/
+}
+
+.boton-empezar:hover{
+    background: rgb(2, 189, 236);
+    color: yellow;
+    transition: .2s;
+}
+
+
+
+
+/*SECCIÓN PERSONAS*/
+/*caja de sección personas*/
+#personas {
+    padding: 50px; /*relleno alrededor*/
+    display: flex; /*para que los elementos se pongan uno al lado del otro y no debajo*/
+    justify-content: center; /*centra los elementos*/
+    text-align: center; /*centra el texto*/
+}
+
+#personas img {
+    border-radius: 100%;
+    max-width: 30%;
+}
+
+#personas div {
+    padding: 5%;
+}
+
+#personas h4 {
+    text-transform: uppercase;
+    font-weight: 2px;
+    margin: 1px 0;
+}
+
+#personas p {
+ opacity: .5;
+}
+
+.boton-saber-mas {
+   text-decoration: none;
+   border: 1px solid black; 
+   display: inline-block; /*para que podamos ponerle margin*/
+   margin: 10px;
+   padding: 3px 6px;
+}
+
+.boton-saber-mas:hover {
+    background: rgb(5, 205, 255);
+    color: yellow;
+    transition: .2s;
+}
+
+
+
+
+
+
+
+/*DISEÑO RESPONSIVE*/
+/*Barra de Navegación Responsive*/
+@media (max-width: 767px) {
+    .mostrar-menu, .esconder-menu {
+        display: block; /*para que estos botones se muestren en pantalla pequeñas*/
+    }
+
+    .menu {
+        position: fixed; /*para que la caja quede fija en la pantalla cuando se haga scroll*/
+        width: 100%; /*para que la caja ocupe el 100% de ancho de la pantalla*/
+        height: 100vh; /*para que la caja ocupe toda la pantalla a lo largo*/
+        top: 0; /*para que la caja ocupe toda la pantalla a lo largo*/
+        background: rgb(62, 86, 92); /*color de fondo de la caja*/
+        right: -100%; /*para que la caja del menú esté escondida hacia la derecha*/
+        text-align: center; /*centra el texto*/
+        padding: 100px 0; /*relleno de la caja en eje Y y eje X (el cero es para que centre el contenido horizontalmente)*/
+        z-index: 100; /*para que la caja se ponga por encima de todas las demás*/
+        transition: .8s; /*para que la trasición cuando aparezca sea suave y no tan brusca*/
+    }
+
+    .menu a {
+        display: block; /*para que los enlaces se pongan uno debajo del otro*/
+        padding: 20px; /*relleno alrededor para que no estén tan amontonados*/
+    }
+
+    .esconder-menu {
+        position: absolute; /*posiciona al botón para que pueda ser movido*/
+        top: 40px; /*cuanto lo vamos a mover hacia arriba*/
+        right: 40px; /*cuanto lo vamos a mover hacia la derecha*/
+    }
+    
+    
+    #check:checked ~ .menu {
+        right: 0; /*cuando el elemento de id check está chequeado (cuando le damos clic al botón menú) la caja hermana de clase "menú" 
+        se desplace hacia la izquierda (pasando de -100 en la derecha a 0 a la izquierda)*/
+    }
+
+    #personas h4 {
+    max-width: 100px; /*para que el nombre de las personas ocupe ese espacio y no se desforme la imagen ni el párrafo*/
+}
+
+
+}
+
+
+
