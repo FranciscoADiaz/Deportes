@@ -43,7 +43,7 @@ header {
     top: 5%; /*para que no tape la caja de arriba*/
     height: 50px; /*alto*/
     padding: 0 25px; /*padding en el eje Y y eje X*/
-    background: rgb(148, 190, 31); /*color de fondo*/
+    background: rgb(5, 205, 255); /*color de fondo*/
     display: flex; /*para que sus elementos se pongan uno al lado de otro*/
     justify-content: space-between; /*para que haya un espacio entre sus elementos*/
     align-items: center; /*para que sus elementos se centren verticalmente*/
@@ -151,6 +151,7 @@ header {
     display: flex; /*para que los elementos se pongan uno al lado del otro y no debajo*/
     justify-content: center; /*centra los elementos*/
     text-align: center; /*centra el texto*/
+    background: rgb(255, 255, 255);
 }
 
 #personas img {
@@ -189,7 +190,33 @@ header {
 
 
 
+/*SECCIÓN DEPORTES*/
+.caja-deportes {
+    width: 100%;
+    background: rgb(5, 205, 255);
+    padding: 2%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
+
+.caja-deportes img {
+    max-width: 50px;
+    border-radius: 100%;
+}
+
+
+
+.caja-imagen {
+width: 100%;
+display: inline-block;
+align-items: center;
+margin: 20px;
+text-align: center;
+border: 1px solid rgb(0, 0, 0);
+padding: 10px;
+}
 
 
 /*DISEÑO RESPONSIVE*/
