@@ -151,7 +151,7 @@ header {
     display: flex; /*para que los elementos se pongan uno al lado del otro y no debajo*/
     justify-content: center; /*centra los elementos*/
     text-align: center; /*centra el texto*/
-    background: rgb(255, 255, 255);
+    background: rgb(5, 205, 255);
 }
 
 #personas img {
