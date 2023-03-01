@@ -1,9 +1,9 @@
 
 /*RESET*/
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0; /*para quitarle el margin que le pone por defecto el navegador a los elementos*/
+    padding: 0; /*para quitarle el padding que le pone por defecto el navegador a los elementos*/
+    box-sizing: border-box; /*para que el tamaño total de un elemento (ancho y alto) incluya el contenido, relleno y borde*/
     font-family: 'Shantell Sans', cursive;
 }
 
@@ -219,6 +219,87 @@ padding: 20px;
 }
 
 
+
+
+/*SECCIÓN FORMULARIO DE CONTACTO*/
+#contacto {
+    background: rgb(5, 205, 255);
+    padding: 50px;
+    color: white; /*para que el color de texto de contenedor sea blanco*/
+    border-top: 1px solid black;
+}
+
+
+
+div .nombre, div .email {
+    display: inline-block; /*para que estos dos elementos se pongan uno al lado del otro*/
+}
+
+#contacto h4 {
+    font-size: larger;
+    text-align: center;
+    padding-bottom: 40px;
+    color: yellow;
+}
+
+
+.boton-formulario {
+    text-align: center; /*para que el conenedor del boton se ponga en el medio de su contenedor*/
+    margin: 10px; /*margen alrededor*/
+}
+
+.boton-enviar {
+    color: yellow;
+    text-decoration: none;
+    border: 1px solid black;
+    border-radius: 30%;
+    padding: 0 10px;
+    background: #E1306C;
+}
+
+textarea {
+    width: 100%; /*para que ocupe le 100% del contenedor*/
+}
+
+
+
+
+
+/*FOOTER*/
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+  }
+  
+  .contenedor {
+    max-width: 100%;
+    display: flex; /*para activar las propiedades flexbox*/
+    flex-direction: column; /*para que los elementos se pongan uno debajo del otro*/
+    align-items: center; /*para que los elementos se centren horizontalmente*/
+    height: 80px; /**/
+    padding-top: 10px; /**/
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  li {
+    display: inline-block;
+  }
+  
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+
+
+
+
+
+
 /*DISEÑO RESPONSIVE*/
 /*Barra de Navegación Responsive*/
 @media (max-width: 767px) {
@@ -257,8 +338,18 @@ padding: 20px;
     }
 
     #personas h4 {
-    max-width: 100px; /*para que el nombre de las personas ocupe ese espacio y no se desforme la imagen ni el párrafo*/
+    width: 100%; /*para que el nombre de las personas ocupe el 100% de ancho de su contenedor*/
 }
+
+#personas {
+    flex-direction: column; /*para que en móvil las cajitas dentro del contenedor se distribuyan una debajo de la otra*/
+
+}
+
+.caja-deportes {
+    flex-direction: column; /*para que en móvil las cajitas dentro del contenedor se distribuyan una debajo de la otra*/
+}
+
 
 
 }
