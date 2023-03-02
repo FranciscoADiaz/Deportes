@@ -131,13 +131,16 @@ header {
     color: white;
     text-decoration: none;
     border: 2px solid rgb(105, 105, 112);
-    padding: 5px 10px; 
+    padding: 4px 7px; 
     align-self: baseline; /*propiedad de flex box para pasar un elemento en bloque a elemento en línea*/
 }
 
 .boton-empezar {
     background: #E1306C;
     color: yellow;
+    border: 1px solid rgb(70, 70, 70);
+    border-radius: 30%;
+    box-shadow: -3px 5px 10px rgb(119, 119, 119);
 }
 
 
@@ -175,15 +178,14 @@ header {
 
 .boton-saber-mas {
    text-decoration: none;
-   border: 1px solid black; 
+   border: 1px solid rgb(70, 70, 70); 
    display: inline-block; /*para que podamos ponerle margin*/
    margin: 10px;
    padding: 3px 6px;
-}
-
-.boton-saber-mas {
-    background: #E1306C;
-    color: yellow;
+   background: #E1306C;
+   color: yellow;
+   border-radius: 30%;
+   box-shadow: -3px 5px 10px rgb(119, 119, 119);
 }
 
 
@@ -192,7 +194,7 @@ header {
 /*SECCIÓN DEPORTES*/
 .caja-deportes {
     width: 100%;
-    background: rgb(5, 255, 68);
+    background: rgb(0, 255, 13);
     padding: 2%;
     display: flex;
     justify-content: space-between;
@@ -251,10 +253,11 @@ div .nombre, div .email {
 .boton-enviar {
     color: yellow;
     text-decoration: none;
-    border: 1px solid black;
+    border: 1px solid rgb(70, 70, 70);
     border-radius: 30%;
     padding: 0 10px;
     background: #E1306C;
+    box-shadow: -3px 5px 10px rgb(119, 119, 119);
 }
 
 textarea {
