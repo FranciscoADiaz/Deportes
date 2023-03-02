@@ -131,11 +131,9 @@ header {
     color: white;
     text-decoration: none;
     border: 2px solid rgb(105, 105, 112);
-    padding: 4px 7px; 
+    padding: 3px 7px; 
     align-self: baseline; /*propiedad de flex box para pasar un elemento en bloque a elemento en línea*/
-}
 
-.boton-empezar {
     background: #E1306C;
     color: yellow;
     border: 1px solid rgb(70, 70, 70);
@@ -155,6 +153,7 @@ header {
     text-align: center; /*centra el texto*/
     background: rgb(5, 205, 255);
     border-top: 1px solid black;
+    box-shadow: 1px 1px 20px ;
 }
 
 #personas img {
@@ -201,6 +200,7 @@ header {
     align-items: center;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
+    padding: 150px 0;
 }
 
 
@@ -217,7 +217,7 @@ display: inline-block;
 align-items: center;
 margin: 20px;
 text-align: center;
-border: 1px solid rgb(0, 0, 0);
+box-shadow: 1px 1px 5px;
 padding: 20px;
 }
 
@@ -228,8 +228,10 @@ padding: 20px;
 #contacto {
     background: rgb(5, 205, 255);
     padding: 50px;
-    color: white; /*para que el color de texto de contenedor sea blanco*/
+    color: white; /*para que el color de texto de contenedor sea blanco*
 }
+
+
 
 
 
@@ -342,16 +344,25 @@ footer {
 
     #personas h4 {
     width: 100%; /*para que el nombre de las personas ocupe el 100% de ancho de su contenedor*/
-}
+    }
 
-#personas {
+   #personas {
     flex-direction: column; /*para que en móvil las cajitas dentro del contenedor se distribuyan una debajo de la otra*/
 
-}
+    }
 
-.caja-deportes {
-    flex-direction: column; /*para que en móvil las cajitas dentro del contenedor se distribuyan una debajo de la otra*/
-}
+
+   .caja-deportes {
+   flex-direction: column; /*para que en móvil las cajitas dentro del contenedor se distribuyan una debajo de la otra*/
+   }
+
+   .caja-imagen {
+    width: 90% ;
+   }
+
+
+
+
 
 
 
