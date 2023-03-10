@@ -3,12 +3,14 @@
 * {
     margin: 0; /*para quitarle el margin que le pone por defecto el navegador a los elementos*/
     padding: 0; /*para quitarle el padding que le pone por defecto el navegador a los elementos*/
-    box-sizing: border-box; /*para que el tamaño total de un elemento (ancho y alto) incluya el contenido, relleno y borde*/
-    font-family: 'Shantell Sans', cursive;
+    box-sizing: border-box; /*para cuando se define alto y ancho de un elemento incluya el contenido, padding y borde*/
+    font-family: 'Shantell Sans', cursive; /*estilo de fuente*/
 }
 
-/*Arriba del Header*/
-#arribadelheader {
+
+
+/*REDES Y OTROS*/
+#redes-y-otros {
     width: 100%;
     height: 5%;
     background: rgb(59, 54, 54);
@@ -38,6 +40,8 @@
 
 
 
+
+
 /*HEADER*/
 header {
     top: 5%; /*para que no tape la caja de arriba*/
@@ -56,11 +60,14 @@ header {
     font-weight: 900; /*grosor del texto*/
 }
 
+/*Menú de navegación*/
+.mostrar-menu, .esconder-menu {
+    font-size: 30px; /*tamaño botones*/
+    cursor: pointer; /*para que el cursor se trasforme en manito cuando pase por encima de los botones mostrar y esconder*/
+    display: none; /*para que los botones no se vean (en pantalas grandes)*/
+    transition: .4s; /*para que cuando se muestre y cierre la barra del menú sea suave y no tan brusco*/
+}
 
-
-
-
-/*Barra de navegación*/
 .menu a {
     color: aliceblue; /*color texto*/
     text-transform: uppercase; /*texto en mayúscula*/
@@ -72,14 +79,6 @@ header {
     padding: 0 30px; /*padding en el eje Y y eje X del elemento a en segunda posición*/
 }
 
-
-.mostrar-menu, .esconder-menu {
-    font-size: 30px; /*tamaño botones*/
-    cursor: pointer; /*para que el cursor se trasforme en manito cuando pase por encima de los botones mostrar y esconder*/
-    display: none; /*para que los botones no se vea en pantallas medianas y grandes*/
-    transition: .4s; /*para que cuando se muestre y cierre la barra del menú sea suave y no tan brusco*/
-}
-
 .menu a:hover, .mostrar-menu a:hover, .esconder-menu a:hover {
     color: rgb(62, 86, 92); /*para que los links cambien de color cuando el mouse pase por arriba*/
 }
@@ -89,6 +88,12 @@ header {
 }
 
 
+
+
+
+
+
+/*SECCIÓN BANNER*/
 #banner {
     padding: 0 50px; /*relleno en el eje Y y eje X*/
     background-image: url(imagenes/futbol.jpg); /*una imagen de fondo a la caja del banner*/
@@ -126,7 +131,6 @@ header {
     justify-content: center; /*para que el contenido se centre de forma vertical dentro de la caja del banner*/
 }
 
-
 .boton-empezar {
     color: white;
     text-decoration: none;
@@ -144,31 +148,34 @@ header {
 
 
 
+
+
 /*SECCIÓN PERSONAS*/
 /*caja de sección personas*/
 #personas {
     padding: 50px; /*relleno alrededor*/
-    display: flex; /*para que los elementos se pongan uno al lado del otro y no debajo*/
+    display: flex; /*para que la caja sea flexible y se activen más propiedades*/
     justify-content: center; /*centra los elementos*/
-    text-align: center; /*centra el texto*/
+    text-align: center; /*centra los texto*/
     background: rgb(5, 205, 255);
     border-top: 1px solid black;
     box-shadow: 1px 1px 20px ;
 }
 
-#personas img {
-    border-radius: 100%;
-    max-width: 30%;
+#personas img {   
+    max-width: 25%; /*para ajustar el ancho de la imágen*/
+    border-radius: 100%; /*para redondear la imagen*/
+    border: 2px solid grey; /*para ponerle color al borde*/
 }
 
 #personas div {
-    padding: 5%;
+    padding: 5%; /*relleno para cada caja de las personas*/
 }
 
 #personas h4 {
     text-transform: uppercase;
-    font-weight: 2px;
-    margin: 1px 0;
+    font-size: large;
+    margin: 5px 0;
 }
 
 #personas p {
@@ -203,13 +210,10 @@ header {
     padding: 150px 0;
 }
 
-
 .caja-deportes img {
     max-width: 50px;
     border-radius: 100%;
 }
-
-
 
 .caja-imagen {
 width: 100%;
@@ -224,19 +228,18 @@ padding: 20px;
 
 
 
+
+
+
 /*SECCIÓN FORMULARIO DE CONTACTO*/
 #contacto {
     background: rgb(5, 205, 255);
     padding: 50px;
-    color: white; /*para que el color de texto de contenedor sea blanco*
+    color: white; /*para que el color de texto de contenedor sea blanco*/
 }
 
-
-
-
-
 div .nombre, div .email {
-    display: inline-block; /*para que estos dos elementos se pongan uno al lado del otro*/
+    display: inline-block; /*para que el nombre y e-mail se pongan uno al lado del otro*/
 }
 
 #contacto h4 {
@@ -277,7 +280,7 @@ footer {
     padding: 20px 0;
   }
   
-  .contenedor {
+  .contenedor-footer {
     max-width: 100%;
     display: flex; /*para activar las propiedades flexbox*/
     flex-direction: column; /*para que los elementos se pongan uno debajo del otro*/
@@ -295,9 +298,26 @@ footer {
   }
   
   a {
-    color: #fff;
+    color: yellow;
     text-decoration: none;
+
   }
+
+  .contenedor-footer div p {
+    color: yellow;
+  }
+
+  .menu-2 {
+    display: flex;
+   justify-content: center;
+  }
+
+  .menu-2 a {
+    margin: 5px;
+    color: #E1306C;
+  }
+
+  
   
 
 
@@ -305,29 +325,29 @@ footer {
 
 
 
-/*DISEÑO RESPONSIVE*/
-/*Barra de Navegación Responsive*/
+/*DISEÑO ADAPTABLE*/
+/*Menú de Navegación*/
 @media (max-width: 767px) {
     .mostrar-menu, .esconder-menu {
-        display: block; /*para que estos botones se muestren en pantalla pequeñas*/
+        display: block; /*para que estos botones se muestren (en pantallas pequeñas)*/
     }
 
     .menu {
-        position: fixed; /*para que la caja quede fija en la pantalla cuando se haga scroll*/
+        position: absolute;
         width: 100%; /*para que la caja ocupe el 100% de ancho de la pantalla*/
         height: 100vh; /*para que la caja ocupe toda la pantalla a lo largo*/
         top: 0; /*para que la caja ocupe toda la pantalla a lo largo*/
-        background: rgb(62, 86, 92); /*color de fondo de la caja*/
         right: -100%; /*para que la caja del menú esté escondida hacia la derecha*/
+        z-index: 100; /*para que la caja se ponga por encima de todas las demás*/
+        background: rgb(62, 86, 92); /*color de fondo de la caja*/
         text-align: center; /*centra el texto*/
         padding: 100px 0; /*relleno de la caja en eje Y y eje X (el cero es para que centre el contenido horizontalmente)*/
-        z-index: 100; /*para que la caja se ponga por encima de todas las demás*/
         transition: .8s; /*para que la trasición cuando aparezca sea suave y no tan brusca*/
     }
 
     .menu a {
-        display: block; /*para que los enlaces se pongan uno debajo del otro*/
-        padding: 20px; /*relleno alrededor para que no estén tan amontonados*/
+        display: block; /*para que los enlaces sean elementos en bloque poniendose uno debajo del otro*/
+        padding: 20px; /*relleno para que no estén pegados*/
     }
 
     .esconder-menu {
@@ -335,35 +355,43 @@ footer {
         top: 40px; /*cuanto lo vamos a mover hacia arriba*/
         right: 40px; /*cuanto lo vamos a mover hacia la derecha*/
     }
-    
-    
+
     #check:checked ~ .menu {
         right: 0; /*cuando el elemento de id check está chequeado (cuando le damos clic al botón menú) la caja hermana de clase "menú" 
         se desplace hacia la izquierda (pasando de -100 en la derecha a 0 a la izquierda)*/
     }
 
+    /*para que el nombre de las personas ocupe el 100% de ancho de su contenedor*/
     #personas h4 {
-    width: 100%; /*para que el nombre de las personas ocupe el 100% de ancho de su contenedor*/
+    width: 100%; 
     }
 
-   #personas {
-    flex-direction: column; /*para que en móvil las cajitas dentro del contenedor se distribuyan una debajo de la otra*/
-
+    /*para que en móvil las cajitas dentro del contenedor se distribuyan una debajo de la otra*/
+    #personas {
+    flex-direction: column; 
+    }
+    
+    /*para que en móvil las cajitas dentro del contenedor se distribuyan una debajo de la otra*/
+    .caja-deportes {
+    flex-direction: column; 
     }
 
-
-   .caja-deportes {
-   flex-direction: column; /*para que en móvil las cajitas dentro del contenedor se distribuyan una debajo de la otra*/
-   }
-
-   .caja-imagen {
+    .caja-imagen {
     width: 90% ;
-   }
+    }
 
+     /*para ajustar el el texto al contenedor*/
+    .contenido-banner h3 {
+        display: flex;
+        flex-direction: column;
+    }
+     
+    /*para que el botón se ponga en el medio del contenedor*/
+    .boton-empezar {
+        margin: 0 auto;
+    }
 
-
-
-
+    
 
 
 }
