@@ -174,7 +174,7 @@ header {
 
 #personas h4 {
     text-transform: uppercase;
-    font-size: large;
+    font-size: medium;
     margin: 5px 0;
 }
 
@@ -198,16 +198,25 @@ header {
 
 
 /*SECCIÓN DEPORTES*/
+#deportes {
+ background: rgb(0, 255, 13);
+ border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+#deportes h2 {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    color: white;
+}
+
 .caja-deportes {
     width: 100%;
-    background: rgb(0, 255, 13);
-    padding: 2%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-    padding: 150px 0;
+    padding-top: 50px;
+    padding-bottom: 150px;
 }
 
 .caja-deportes img {
